@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>nRT | calculadora de conversões financeiras de Harry Potter</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- SHARING META -->
+	<meta property="og:type" content="website"/>
+	<meta property="og:title" content="nRT: necrotério das desgraças"/>
+	<meta property="og:description" content="Mortes em perspectiva"/>
+	<meta property="og:site_name" content="nRT"/>
+	<meta property="og:url" content="http://nrt.paulovelho.com.br/play/to-the-core/"/>
+	<meta property="og:image" content="http://nrt.paulovelho.com.br/play/to-the-core/images/deep-earth.jpg"/>
+	<meta property="twitter:image" content="http://nrt.paulovelho.com.br/play/to-the-core/images/deep-earth.jpg"/>
+	<meta property="twitter:card" content="summary"/>
+	<meta property="twitter:site" content="nRT"/>
+	<meta property="twitter:title" content="nRT: necrotério das desgraças"/>
+	<meta property="twitter:description" content="Mortes em perspectiva"/>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-12115523-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-12115523-3');
+</script>
+
+
+	<link href='css/bootstrap.min.css' rel='stylesheet'>
+	<link href='css/style.css' rel='stylesheet'>
+
+</head>
+<body>
+
+	<nav class="navbar fixed-top flex-md-nowrap p-0 shadow header">
+		<div class="navbar-brand col-sm-2 mr-0" href="#">
+			<a class="site-title" href="http://nrt.paulovelho.com.br/" >nRT</a>
+		</div>
+		<div class="navbar-brand col-sm-8 center page-title" href="#">
+			<a href="http://nrt.paulovelho.com.br/">
+			A Economia de Harry Potter
+			</a>
+		</div>
+		<div class="navbar-brand col-sm-2 mr-0 header-right" href="#">
+			&nbsp;
+		</div>
+	</nav>
+
+	<div class="row calculator">
+		<div class="col-sm-5 currency-hp">
+			<input type="number" onkeypress="return event.charCode >= 48 && event.charCode <= 57" id="galleons" name="galleons" />
+				<label for="galleons">Galeões</label><br/>
+			<input type="number" onkeypress="return event.charCode >= 48 && event.charCode <= 57" id="sickles" name="sickles" />
+				<label for="sickles">Sicles</label><br/>
+			<input type="number" onkeypress="return event.charCode >= 48 && event.charCode <= 57" id="knuts" name="knuts" />
+				<label for="knuts">Nuques</label><br/>
+		</div>
+		<div class="col-sm-2 center">
+			<button class="btn btn-primary" onclick="toTrouxa();">
+				para trouxa ->
+			</button>
+			<br/><br/>
+			<button class="btn btn-primary" onclick="toBruxo();">
+				<- para bruxo
+			</button>
+		</div>
+		<div class="col-sm-5 currency-rl">
+			<span class="more-info"></span><br/>
+			<input type="number" id="trouxa" name="trouxa" class="form" />
+			<select id="currency" onchange="toTrouxa();"></select>
+		</div>
+	</div>
+
+	<hr/>
+	<div class="row year">
+		<div class="col-sm-5 year-hp">
+			<select id="year-hp"></select>
+		</div>
+		<div class="col-sm-2">
+		</div>
+		<div class="col-sm-2">
+			<button class="btn btn-danger" onclick="reset();">Limpar</button>
+		</div>
+		<div class="col-sm-3">
+			<input type="checkbox" value="true" id="showdebug"
+				onchange="$(this).val(this.checked ? $('#logc').show() : $('#logc').hide())">
+			<label for="showdebug">Debug</label>
+		</div>		
+	</div>
+
+	<div class="row log" id="logc" style="display: none;">
+		<div id="log"></div>
+	</div>
+
+	<hr/>
+	<br/>
+
+	<div class="row list" id="item-list">
+	</div>
+
+
+	<br/><br/>
+
+
+	<footer class="footer">
+		<ul class="footer-links">
+			<li><a href="https://github.com/paulovelho/nrt-deepearth">by PV</a></li>
+			<li class="muted">&middot;</li>
+			<li><a href="https://twitter.com/paulovelho" title="paulovelho" target="_blank">@paulovelho</a></li>
+		</ul>
+	</footer>
+
+</body>
+
+	<script type='text/javascript' src='js/_jquery.min.js'></script>
+	<script type='text/javascript' src='js/conversion.js'></script>
+	<script type='text/javascript' src='js/inflation.js'></script>
+	<script type='text/javascript' src='js/logger.js'></script>
+	<script type='text/javascript' src='js/book-list.js'></script>
+
+	<script type='text/javascript' src='js/load.js'></script>
+
+</html>

@@ -1,0 +1,127 @@
+a:hover {
+	color: inherit;
+	text-decoration: none;
+}
+
+.center {
+	text-align: center;
+}
+
+.site-title {
+	font-family: "Merriweather", sans-serif;
+	font-weight: bolder;
+	color: #212529;
+}
+
+.page-title {
+	font-variant: small-caps;
+}
+
+.header {
+	background-color: #FFF;
+	height: 50px;
+}
+.header a {
+	color: #333;
+}
+.header a:hover {
+	color: #550;
+}
+.container {
+	margin-top: 50px;
+	padding-bottom: 300px;
+}
+
+
+/* Footer
+-------------------------------------------------- */
+.footer {
+	text-align: center;
+	padding: 20px 0;
+	margin-top: 30px;
+	border-top: 1px solid #e5e5e5;
+	background-color: #f5f5f5;
+	height: 100px;
+}
+.footer p {
+	margin-bottom: 0;
+	color: #777;
+}
+.footer-links {
+	margin: 10px 0;
+}
+.footer-links li {
+	display: inline;
+	padding: 0 2px;
+}
+.footer-links li:first-child {
+	padding-left: 0;
+}
+
+
+.row {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+
+.row.calculator {
+	margin-top: 100px;
+}
+.currency-hp, .year-hp {
+	text-align: right;
+}
+.currency-hp input {
+	width: 100px;
+}
+.currency-rl input, .currency-rl select {
+	width: 100px;
+}
+.year-hp option {
+	text-align: center;
+}
+.currency-hp label {
+	width: 100px;
+	text-align: left;
+}
+select {
+	width: 250px;
+}
+
+
+.log {
+	text-align: center;
+	padding: 50px auto 10px;
+}
+#log {
+    float: left;
+    width: 80%;
+    background-color: #111;
+    color: green;
+    text-align: left;
+    font-family: monospace;
+    margin: 50px auto 10px;
+    padding: 10px;
+    height: 200px;
+    overflow-y: scroll;
+}
+
+
+.list {
+
+}
+.list .item {
+	text-align: center;
+	cursor: pointer;
+	padding-bottom: 30px;
+}
+.list .item .value {
+	clear: both;
+	color: #444;
+	font-size: 11px;
+}
+.list .item .book {
+	padding-left: 10px;	
+	color: #999;
+	font-size: 12px;
+}
+
