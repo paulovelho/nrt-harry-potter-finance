@@ -67,6 +67,9 @@ a:hover {
 .row.calculator {
 	margin-top: 100px;
 }
+.row.calculator-embed {
+	margin-top: 10px;
+}
 .currency-hp, .year-hp {
 	text-align: right;
 }
