@@ -12,6 +12,7 @@ function startLog(title) {
 
 function endLog() {
 	let logScr = $("#log");
+	if(logScr.length == 0) return;
 	logScr.append("___________________________________________________________<br/><br/>");
 	logScr.scrollTop(logScr[0].scrollHeight);
 }
