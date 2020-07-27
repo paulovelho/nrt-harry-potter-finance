@@ -131,8 +131,10 @@ select {
 	font-size: 12px;
 }
 
-.col-sm-12 {
-	text-align: center;
+@media screen and (max-width:800px) {
+	.col-sm-12 {
+		text-align: center;
+	}
 }
 .git-logo {
 	width: 50px;
