@@ -8,6 +8,16 @@
 1.077
 
 
+115002964 g
+12 s
+3 k
+
+590000000
+
+
+
+
+
 
 // uk inflation per year:
 var inflationPerYear = {
@@ -44,7 +54,7 @@ var inflationPerYear = {
 	2020: 2.29,
 };
 var maxInflationData = 2020;
-var currentYear = 2020;
+var currentYear = new Date().getFullYear();
 
 var inflationCalculator = (val, year) => {
 	let inflation = 5;
@@ -62,7 +72,7 @@ var inflationCalculator = (val, year) => {
 
 let currentYear = 2020
 var inflationCalculator = (val, year) => {
-	let inflation = 3;
+	let inflation = 5;
 	let newValue = val + (val * inflation / 100);
 	if( year == currentYear ) return newValue;
 	return inflationCalculator(newValue, year+1);

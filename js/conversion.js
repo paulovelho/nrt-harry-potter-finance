@@ -67,11 +67,12 @@ function fixCurrencyToGBP() {
 	let currency = $("#currency").val();
 	let value = $("#trouxa").val();
 	if(currency == "GBP") return value;
-	let usd = value / rates[currency];
 	if(currency == "USD") {
-		doLog(`convertendo ${value} de ${currency} para USD: US$ ${usd}`);
+		let usd = value * rates["GBP"];
+		doLog(`convertendo ${value} de ${currency} para GBP: £ ${usd}`);
 		return usd;
 	}
+	let usd = value / rates[currency];
 	let finalVal = usd * rates["GBP"];
 	doLog(`convertendo ${value} de ${currency} para GBP: £ ${finalVal}`);
 	return finalVal;
@@ -97,7 +98,7 @@ function toBruxo() {
 	$("#year-hp").val(currentYear);
 	let pound = fixCurrencyToGBP();
 	let knuts = parseInt(pound / knutPound);
-	doLog(`valor em knuts: ${knuts}`);
+	doLog(`valor do Knut: [£${knutPound}] - total em knuts: ${knuts}`);
 	let hp = knutsToHp(knuts);
 	doLog(printHpMoney(hp));
 	setHpMoney(hp);

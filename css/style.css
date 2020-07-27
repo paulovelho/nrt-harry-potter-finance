@@ -89,20 +89,20 @@ select {
 
 
 .log {
-	text-align: center;
-	padding: 50px auto 10px;
+    margin: 50px auto 10px;
 }
 #log {
-    float: left;
-    width: 80%;
     background-color: #111;
     color: green;
     text-align: left;
     font-family: monospace;
-    margin: 50px auto 10px;
     padding: 10px;
     height: 200px;
     overflow-y: scroll;
+}
+.debug-info {
+	text-align: right;
+	margin-top: 20px;
 }
 
 

@@ -73,7 +73,7 @@ let itemList = [
 		},
 	},
 	{
-		name: "(logo uma butterbeer)",
+		name: "(portanto uma butterbeer)",
 		book: "OF",
 		value: {
 			s: 2,

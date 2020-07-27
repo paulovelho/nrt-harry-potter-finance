@@ -55,13 +55,25 @@ function reset() {
 
 
 let rates = null;
+function fixedRate() {
+	rates = {
+		"BRL": 5.23,
+		"EUR": 0.85,
+		"GBP": 0.78,
+	};
+	$("#usd-rate").html("R$ " + rates["BRL"].toFixed(2));
+	$("#rate-date").html("Cotação aproximada de 25 de julho");
+}
 function getConversions() {
+	return fixedRate();
 	let exchangeKey = "84f0e7f007024e6aa0c5fc52f419b104";
 	let exchangeUrl = "https://openexchangerates.org/api/latest.json?app_id=" + exchangeKey;
 	$.getJSON(
 		exchangeUrl,
 		(data) => {
 			rates = data.rates;
+			$("#usd-rate").html("R$ " + rates["BRL"].toFixed(2));
+			$("#rate-date").html("Cotação automática pelo openexchangerates.org");
 		}
 	);
 }
