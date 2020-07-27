@@ -36,7 +36,7 @@
 <body>
 
 	<div class="row calculator-embed">
-		<div class="col-sm-5 currency-hp">
+		<div class="col-sm-12 col-md-5 currency-hp">
 			<input type="number" onkeypress="return event.charCode >= 48 && event.charCode <= 57" id="galleons" name="galleons" />
 				<label for="galleons">Galeões</label><br/>
 			<input type="number" onkeypress="return event.charCode >= 48 && event.charCode <= 57" id="sickles" name="sickles" />
@@ -44,7 +44,7 @@
 			<input type="number" onkeypress="return event.charCode >= 48 && event.charCode <= 57" id="knuts" name="knuts" />
 				<label for="knuts">Nuques</label><br/>
 		</div>
-		<div class="col-sm-2 center">
+		<div class="col-sm-12 col-md-2 center">
 			<button class="btn btn-primary" onclick="toTrouxa();">
 				para trouxa ->
 			</button>
@@ -53,7 +53,7 @@
 				<- para bruxo
 			</button>
 		</div>
-		<div class="col-sm-5 currency-rl">
+		<div class="col-sm-12 col-md-5 currency-rl">
 			<span class="more-info"></span><br/>
 			<input type="number" id="trouxa" name="trouxa" class="form" />
 			<select id="currency" onchange="toTrouxa();"></select>
