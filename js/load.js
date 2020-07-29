@@ -57,12 +57,12 @@ function reset() {
 let rates = null;
 function fixedRate() {
 	rates = {
-		"BRL": 5.23,
-		"EUR": 0.85,
-		"GBP": 0.78,
+		"BRL": 5.1652,
+		"EUR": 0.849358,
+		"GBP": 0.770808,
 	};
 	$("#usd-rate").html("R$ " + rates["BRL"].toFixed(2));
-	$("#rate-date").html("Cotação aproximada de 25 de julho");
+	$("#rate-date").html("Cotação aproximada de [29 de julho, 15h]");
 }
 function getConversions() {
 	return fixedRate();
