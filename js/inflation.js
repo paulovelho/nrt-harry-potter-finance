@@ -31,7 +31,8 @@ var inflationPerYear = {
 	2017:	3.58,
 	2018:	2.48,
 	2019:	1.80,
-	2020: 2.29,
+	2020: 	0.62,
+	2021:	1,
 };
 var maxInflationData = 2020;
 var currentYear = 2020;
