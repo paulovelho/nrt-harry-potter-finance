@@ -40,7 +40,7 @@ var currentYear = 2020;
 var inflationCalculator = (val, year) => {
 	let inflation = 5;
 	year = parseInt(year);
-	if(year >= 1990 || year < maxInflationData) inflation = inflationPerYear[year];
+	if(year >= 1990 && year < maxInflationData) inflation = inflationPerYear[year];
 	let newVal = val + (val * inflation / 100);
 //	console.info("multiplying "+val+" to inflation ("+inflation+") of " + year, newVal);
 	if( year == currentYear ) return parseFloat(newVal).toFixed(2);
